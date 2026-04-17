@@ -1,0 +1,13 @@
+server:
+  port: 8059
+spring:
+  application:
+    name: LearningSpring
+  datasource:
+    url: jdbc:mysql://localhost:3306/stanleyStrore?createDatabaseIfNotExist=true
+    username: major
+    password: Security$22
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
