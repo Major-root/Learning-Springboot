@@ -3,9 +3,9 @@ package com.stanley.learningspring.dto;
 import com.stanley.learningspring.entity.Roles;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
-import org.antlr.v4.runtime.misc.NotNull;
 
 @Data
 public class RegisterUserRequest {
@@ -24,7 +24,6 @@ public class RegisterUserRequest {
 
     private String lastName;
 
-    @NotBlank(message = "Provide your fucking role mate")
-    @Size(max = 100, message = "You self, provide role with max of 100 char")
-    private Roles roles;
+    @NotNull(message = "Provide your fucking role mate")
+    private Roles role;
 }
